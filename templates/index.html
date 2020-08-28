@@ -1,0 +1,23 @@
+<html >
+<head>
+  <title>Predict the Weight</title>  
+</head>
+
+<body>
+ <div>
+	<h1>Predict Weight</h1>
+
+    <form action="{{ url_for('getprediction')}}"method="post">
+    	<input type="text" name="height" placeholder="Height" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">getprediction</button>
+    </form>
+
+   <br>
+   <br>
+   {{ output }}
+
+ </div>
+
+
+</body>
+</html>
