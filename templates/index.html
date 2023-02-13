@@ -1,23 +1,17 @@
-<html >
-<head>
-  <title>Predict the Weight</title>  
-</head>
-
-<body>
- <div>
-	<h1>Predict Weight</h1>
-
-    <form action="{{ url_for('getprediction')}}"method="post">
-    	<input type="text" name="height" placeholder="Height" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">getprediction</button>
+<html>
+  <head>
+    <title>Quantum Circuit Simulator</title>
+  </head>
+  <body>
+    <h1>Quantum Circuit Simulator</h1>
+    <form action="/execute" method="post">
+      <textarea name="code" rows="20" cols="100"></textarea>
+      <br><br>
+      <input type="submit" value="Simulate Circuit">
     </form>
-
-   <br>
-   <br>
-   {{ output }}
-
- </div>
-
-
-</body>
+    <br><br>
+    {% if output %}
+      <h2>{{ output }}</h2>
+    {% endif %}
+  </body>
 </html>
